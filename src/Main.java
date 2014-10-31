@@ -22,5 +22,21 @@ public class Main {
 			new Thread().sleep(200);
 		}
 		mc[5].noteOff(0);
+		public static void cmajor(int key) throws InterruptedException, MidiUnavailableException{
+    for (int i=0; i<4; i++){   
+      mc[5].noteOn(60+key,100);
+      new Thread().sleep(200);
+      mc[5].noteOff(60+key,0);
+      mc[5].noteOn(67+key,100);
+      new Thread().sleep(200);
+      mc[5].noteOff(67+key,0);
+      mc[5].noteOn(64+key,100);
+      new Thread().sleep(200);
+      mc[5].noteOff(64+key,0);
+      mc[5].noteOn(67+key,100);
+      new Thread().sleep(200);
+      mc[5].noteOff(67+key,0);
+    }
+  }
 	}
 }
